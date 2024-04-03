@@ -1,4 +1,7 @@
 
+import javax.swing.JOptionPane;
+
+
 public class NewJFrame extends javax.swing.JFrame {
 
     /**
@@ -55,7 +58,7 @@ public class NewJFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void ConvertidorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConvertidorActionPerformed
-        private void ConvertidorActionPerformed(java.awt.event.ActionEvent evt) {                                            
+                                                    
     // Obtener la temperatura en Celsius ingresada por el usuario
     String celsiusText = Entradatemperatura.getText();
 
@@ -73,7 +76,7 @@ public class NewJFrame extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(this, "Por favor, ingrese un número válido para la temperatura en Celsius.",
                 "Error", JOptionPane.ERROR_MESSAGE);
     }
-}
+
 
     }//GEN-LAST:event_ConvertidorActionPerformed
 
