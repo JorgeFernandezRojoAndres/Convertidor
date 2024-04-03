@@ -55,7 +55,26 @@ public class NewJFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void ConvertidorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConvertidorActionPerformed
-        // TODO add your handling code here:
+        private void ConvertidorActionPerformed(java.awt.event.ActionEvent evt) {                                            
+    // Obtener la temperatura en Celsius ingresada por el usuario
+    String celsiusText = Entradatemperatura.getText();
+
+    try {
+        // Convertir el texto a un número decimal
+        double celsius = Double.parseDouble(celsiusText);
+
+        // Calcular la temperatura en Fahrenheit
+        double fahrenheit = celsius * 9 / 5 + 32;
+
+        // Mostrar el resultado en un cuadro de diálogo emergente
+        JOptionPane.showMessageDialog(this, "Fahrenheit: " + fahrenheit);
+    } catch (NumberFormatException ex) {
+        // Manejar la excepción si el usuario ingresa un valor no válido
+        JOptionPane.showMessageDialog(this, "Por favor, ingrese un número válido para la temperatura en Celsius.",
+                "Error", JOptionPane.ERROR_MESSAGE);
+    }
+}
+
     }//GEN-LAST:event_ConvertidorActionPerformed
 
     /**
